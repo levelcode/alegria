@@ -15,22 +15,42 @@ body{
     color: white;
     text-shadow: none;
     font-size: 13px;
-    padding: 25px 10px;
+    padding: 7px 11px;
     font-weight: 100;
-    height: 20px;
+    height: auto;
+    border-bottom: solid 2px transparent;
+    letter-spacing: 0.4px;
 }
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     color:white;
-    border-bottom: solid 3px white;
+    border-bottom: solid 2px white;
+    background:none;
 }
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.active>a {
+.navbar-default .navbar-nav>li>a:focus {
+    color:white;
+    border-bottom: none;
+}
+.navbar-default .navbar-nav>.open>a {
+    background: none;
+    color:white;
+    border-bottom: solid 2px red;
+
+}
+.navbar-default .navbar-nav>.active>a {
     background: white;
     color: black;
     font-weight: 400;
-    border-bottom: solid 3px red;
+    border-bottom: solid 2px red;
 }
 .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.active>a:hover {
-    border-bottom: solid 3px red;
+    border-bottom: solid 2px red;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: white !important;
+    background-color: #272727 !important;
+}
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 440px;
 }
 .custom-logo-link img{
     width: 130px;
@@ -45,7 +65,7 @@ body{
 }
 .main-search .btn:hover{
     color:white;
-    border-bottom: solid 3px white;
+    border-bottom: solid 2px white;
 }
 header .navbar-form{
     margin: 0px;
@@ -74,6 +94,22 @@ header .navbar-form{
 #menu-principal{
     margin: 0px -15px;
 }
+#menu-principal .dropdown-menu{
+   font-size: 12px;
+   background: #272727;
+}
+
+#menu-principal .dropdown-menu>li>a {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    height: 30px;
+}
+#menu-principal .dropdown-menu>li>a:hover, #menu-principal .dropdown-menu>li>a:focus{
+    border-bottom:solid 2px white;
+    background:#272727
+    
+}
 .search-box{
     float:right;
 }
@@ -84,6 +120,7 @@ header .navbar-form{
     }
     .navbar-default .navbar-nav>li>a {
         height: 73px;
+        line-height: 59px;
     }
 }
 
@@ -108,7 +145,7 @@ header .navbar-form{
     margin-left: 15px;
 }
 
-.el1, .el2, .el3, .el4, .el5 {
+.obj_jumbo {
     height: 370px;
     background-size: cover;
     background-position: center center;
@@ -123,7 +160,7 @@ header .navbar-form{
     border: solid 1px black;
     padding: 20px;
 }
-.el1:hover, .el2:hover, .el3:hover, .el4:hover, .el5:hover {
+.obj_jumbo:hover {
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -o-filter: grayscale(0%);
@@ -143,6 +180,15 @@ header .navbar-form{
     background-image: url(../assets/noticias.jpg);
 }
 .el5{
+    background-image: url(../assets/mundo.jpg);
+}
+.el6{
+    background-image: url(../assets/caso.jpg);
+}
+.el7{
+    background-image: url(../assets/noticias.jpg);
+}
+.el8{
     background-image: url(../assets/mundo.jpg);
 }
 .home .col-xs-12 {
@@ -235,7 +281,9 @@ header .navbar-form{
     margin-top: 20px;
 }
 
-
+.home .icono{
+    font-size: 78px;
+}
 
 @media screen and (min-width: 768px) {
     
