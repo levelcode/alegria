@@ -8,13 +8,14 @@ $(document).ready(function() {
 
     $('.content_signs').delay(2500).fadeIn(400);
     // LOADING 
-
-	// menu 
-
-
-
     loading();
 
+    // MENU
+
+	$('.ver_mas').click(function() {
+	  var url = String($(this).attr("data-link"));
+	  window.location.href = url;
+	});
     
   	
 });

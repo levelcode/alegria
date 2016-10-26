@@ -1,5 +1,4 @@
-
-body{
+body, html{
     width:100%;
     height:100%;
     background: url(../assets/pattern_frase.jpg) 0px 0px repeat;
@@ -110,6 +109,9 @@ header .navbar-form{
     background:#272727
     
 }
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+    background:#4e4e4e
+}
 .search-box{
     float:right;
 }
@@ -159,6 +161,7 @@ header .navbar-form{
     box-shadow: 0 0 10px -3px black;
     border: solid 1px black;
     padding: 20px;
+    overflow: hidden;
 }
 .obj_jumbo:hover {
     -webkit-filter: grayscale(0%);
@@ -191,7 +194,7 @@ header .navbar-form{
 .el8{
     background-image: url(../assets/mundo.jpg);
 }
-.home .col-xs-12 {
+.home .col-xs-12, .quehacemos .col-xs-12{
     width: 98%;
     margin: 1%;
 }
@@ -287,11 +290,15 @@ header .navbar-form{
 
 @media screen and (min-width: 768px) {
     
-    .home .col-lg-4 {
+    .home .col-lg-4, .quehacemos .col-sm-4{
         width: 31.333333%;
         margin: 1%;
     }
-    .el1, .el2, .el3, .el4, .el5 {
+    .home .col-lg-6, .quehacemos .col-sm-6{
+        width: 48%;
+        margin: 1%;
+    }
+    .obj_jumbo {
          /* Safari 6.0 - 9.0 */
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -308,3 +315,64 @@ header .navbar-form{
         margin-bottom: 30px;
     }
 }
+/* interna 1 */
+
+
+.fullh img {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.contenido h1{
+    position: absolute;
+    z-index: 1;
+    margin-top: 0 !important;
+    width: 100%;
+    left: 0px;
+    text-align: left;
+    margin: 0px 20px;
+}
+.contenido:nth-child(2){
+    background-color: white;
+    filter: none;
+    border: solid 2px red;
+}
+.contenido .texto{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: left;
+    line-height: 24px;
+    text-shadow: none;
+    color: black;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: initial;
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .quehacemos .row:nth-child(1), .quehacemos, .quehacemos .fullh{
+        height: calc(100% - 10px);
+    }
+    .fullh h1{
+        margin-top:50%
+    }
+    .fullh img{
+        position: absolute;
+        right: -50%;
+        top: 0px;
+        left: auto;
+        height: auto;
+        width: auto;
+        min-height: 100%;
+        min-width: 100%;
+    }
+}
+
