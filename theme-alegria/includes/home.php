@@ -24,10 +24,14 @@
                 $subtitulo = get_post_meta($page->ID, 'subtitulo' );
 
                 $elemento = '<div class="'.$ancho[0].' '.$fondo[0].' obj_jumbo">';
+                $elemento .= '<div class="titulos1">';
                 $elemento .= '<div class="icono"><i class="fa '.$icono[0].'"></i></div>';
+                $elemento .= '<div class="titulos2">';
                 $elemento .= '<h1>'.$page->post_title.'</h1>';
                 $elemento .= '<p>'.$subtitulo[0].'</p>';
                 $elemento .= '<div class="ver_mas" data-link="'.get_page_link( $page->ID ).'">ver más</div>';
+                $elemento .= '</div>';
+                $elemento .= '</div>';
                 $elemento .= '</div>';
                 echo $elemento; 
             }  

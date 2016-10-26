@@ -16,6 +16,10 @@ $(document).ready(function() {
 	  var url = String($(this).attr("data-link"));
 	  window.location.href = url;
 	});
+  $('.quehacemos .fullh').click(function() {
+    var url = String($(this).attr("data-link"));
+    window.location.href = url;
+  });
     
   	
 });

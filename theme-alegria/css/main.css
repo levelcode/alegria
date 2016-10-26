@@ -1,11 +1,15 @@
 body, html{
     width:100%;
     height:100%;
-    background: url(../assets/pattern_frase.jpg) 0px 0px repeat;
+    background-color: #27242b;
+    min-height: 590px;
+}
+header{
+    margin-bottom:-20px;
 }
 .navbar {
     position: relative;
-    background: #272727;
+    background: #2f2c33;
     color:white;
     box-shadow: 0 0 10px black;
     border: none;
@@ -14,7 +18,7 @@ body, html{
     color: white;
     text-shadow: none;
     font-size: 13px;
-    padding: 7px 11px;
+    padding: 7px 6px;
     font-weight: 100;
     height: auto;
     border-bottom: solid 2px transparent;
@@ -46,7 +50,7 @@ body, html{
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
     color: white !important;
-    background-color: #272727 !important;
+    background-color: #2f2c33 !important;
 }
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     max-height: 440px;
@@ -71,12 +75,12 @@ header .navbar-form{
 }
 
 .well{
-    background: none;
-    padding: 0px;
+    padding: 13px;
     border: none;
     border-radius: 0px;
     margin-bottom: 0px;
-    margin-top: 19px;
+    margin-top: 4px;
+    background: #2f2c33;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: white;
@@ -91,11 +95,13 @@ header .navbar-form{
     margin-right: calc(50% - 40px);
 }
 #menu-principal{
-    margin: 0px -15px;
+    margin: 0 auto;
+    float: none !important;
+    width: 470px;
 }
 #menu-principal .dropdown-menu{
    font-size: 12px;
-   background: #272727;
+   background: #2f2c33;
 }
 
 #menu-principal .dropdown-menu>li>a {
@@ -106,17 +112,18 @@ header .navbar-form{
 }
 #menu-principal .dropdown-menu>li>a:hover, #menu-principal .dropdown-menu>li>a:focus{
     border-bottom:solid 2px white;
-    background:#272727
+    background:#2f2c33
     
 }
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
     background:#4e4e4e
 }
-.search-box{
-    float:right;
-}
+.search-box{position: absolute;right: 0px;top: 69px;}
 
 @media screen and (min-width: 768px) {
+    .obj_jumbo {
+        height: calc(33% - 45px);
+    }
     .navbar {
         padding: 0px 20px;
     }
@@ -129,38 +136,53 @@ header .navbar-form{
 /* Home */
 
 .frase{
-        height: 110px;
+        height: 60px;
         color: white;
         text-transform: uppercase;
         padding: 16px;
         text-align: center;
+        background: url(../assets/pattern_frase.jpg) 0px 0px repeat;
 }
 .frase div{
-    width: 600px;
-    margin-left: calc(50% - 300px);
-    font-size: 45px;
-    line-height: 37px;
-    padding-top: 20px;
+    width: 270px;
+    margin-left: calc(50% - 135px);
+    line-height: 35px;
 }
 .frase p, .frase img{
     float:left;
     margin-left: 15px;
+    font-size: 20px;
+}
+.titulos1{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.titulos2{
+    text-align: left;
+    float: left;
+    padding-top: 0px;
+    margin-top: -23px;
+    line-height: 15px;
+    margin-left: 10px;
+    width: calc(100% - 70px);
+}
+.titulos2 h1{
+    font-size: 27px;
+    margin: 8px 0px;
 }
 
 .obj_jumbo {
-    height: 370px;
+    height: 300px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     color: white;
     text-align: center;
-    line-height: 70px;
+    line-height: 20px;
     text-shadow: 0 0 10px #000000, 0 0 10px #000000;
-    border-radius: 26px;
     text-transform: capitalize;
     box-shadow: 0 0 10px -3px black;
-    border: solid 1px black;
-    padding: 20px;
+    padding: 10px;
     overflow: hidden;
 }
 .obj_jumbo:hover {
@@ -194,31 +216,23 @@ header .navbar-form{
 .el8{
     background-image: url(../assets/mundo.jpg);
 }
-.home .col-xs-12, .quehacemos .col-xs-12{
-    width: 98%;
-    margin: 1%;
-}
 .ver_mas{
     font-size: 16px;
     text-transform: capitalize;
     border: solid 1px white;
     width: 100px;
-    height: 50px;
-    line-height: 46px;
-    border-radius: 9px;
-    background-color: rgba(0,0,0,0.4);
-    margin-left: calc(50% - 50px);
+    height: 36px;
+    line-height: 36px;
+    background-color: rgba(0,0,0,0.5);
     font-weight: 100;
     transition-property: transform;
     transition-duration: 0.3s;
     cursor: pointer;
     transition-timing-function: ease-in-out;
+    text-align: center;
 }
 .ver_mas:hover{
     transform:scale(1.1);
-    background:black;
-    border-color:red;
-    color:white;
     text-shadow:none;
 }
 
@@ -251,10 +265,6 @@ header .navbar-form{
     width: 100%;
     height: auto;
     position: relative;
-    border: solid 1px red;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.4);
-    box-shadow: 0 0 10px -1px black;
     margin-bottom: 10px;
 }
 .mapa .paises{
@@ -278,36 +288,24 @@ header .navbar-form{
     text-align:center;
     color:white;
     font-size:11px;
-    background: #272727;
+    background: #2f2c33;
     padding: 40px;
     box-shadow: 0 0 41px -5px black;
     margin-top: 20px;
 }
 
 .home .icono{
-    font-size: 78px;
+    font-size: 45px;
+    float: left;
 }
 
 @media screen and (min-width: 768px) {
-    
-    .home .col-lg-4, .quehacemos .col-sm-4{
-        width: 31.333333%;
-        margin: 1%;
+    .home .obj_jumbo {
+        height: calc(33% - 23px);
     }
-    .home .col-lg-6, .quehacemos .col-sm-6{
-        width: 48%;
-        margin: 1%;
-    }
-    .obj_jumbo {
-         /* Safari 6.0 - 9.0 */
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -o-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        filter: grayscale(100%);
-        transition-property: filter;
-        transition-duration: 0.3s;
-        transition-timing-function: linear;
+    .home .row:nth-child(2), .home, .home .fullh{
+        height: calc(100% - 24px);
+        margin-bottom: -68px;
     }
     .mapa img {
         padding: 29px 30px;
@@ -322,10 +320,11 @@ header .navbar-form{
     width: auto;
     height: auto;
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     min-width: 100%;
     min-height: 100%;
+    z-index: 0;
 }
 .contenido h1{
     position: absolute;
@@ -339,7 +338,8 @@ header .navbar-form{
 .contenido:nth-child(2){
     background-color: white;
     filter: none;
-    border: solid 2px red;
+    padding: 40px;
+    height: auto;
 }
 .contenido .texto{
     height: 100%;
@@ -355,18 +355,28 @@ header .navbar-form{
     text-transform: initial;
 
 }
-
+.quehacemos .row:nth-child(1):hover, .quehacemos, .quehacemos .fullh:hover{
+    cursor:pointer;
+}
+.fullh .titulos1{
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 20px;
+    z-index: 10;
+}
 
 @media screen and (min-width: 768px) {
     .quehacemos .row:nth-child(1), .quehacemos, .quehacemos .fullh{
-        height: calc(100% - 10px);
+        height: calc(100% - 24px);
+        margin-bottom: -68px;
     }
+    
     .fullh h1{
-        margin-top:50%
+        
     }
     .fullh img{
         position: absolute;
-        right: -50%;
+        right: 0px;
         top: 0px;
         left: auto;
         height: auto;
