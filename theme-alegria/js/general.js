@@ -12,13 +12,14 @@ $(document).ready(function() {
 
     // MENU
 
-	$('.ver_mas').click(function() {
+	$('.ver_mas, .obj_jumbo').click(function() {
 	  var url = String($(this).attr("data-link"));
 	  window.location.href = url;
 	});
-  $('.quehacemos .fullh').click(function() {
-    var url = String($(this).attr("data-link"));
-    window.location.href = url;
+  $('.modal_intro').click(function() {
+    $(this).fadeOut('fast', function(){
+      $(this).hide();
+    });
   });
     
   	
