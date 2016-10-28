@@ -117,7 +117,7 @@ header .navbar-form{
 #menu-principal .dropdown-menu>li>a:hover, #menu-principal .dropdown-menu>li>a:focus{
     border-bottom:solid 2px white;
     background:#2f2c33
-    
+
 }
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
     background:#4e4e4e
@@ -397,9 +397,9 @@ header .navbar-form{
         height: calc(100% - 24px);
         margin-bottom: -68px;
     }
-    
+
     .fullh h1{
-        
+
     }
     .fullh img{
         position: absolute;
@@ -444,7 +444,7 @@ header .navbar-form{
             text-transform: uppercase;
         }
 
-    .single-post .main,    
+    .single-post .main,
     .page-template-noticias .main{
         height: 100%;
         background-color:#fff;
@@ -457,12 +457,69 @@ header .navbar-form{
         }
             .single-post .main article .date,
             .single-post .main article p,
-            .page-template-noticias .main article .date, 
+            .page-template-noticias .main article .date,
             .page-template-noticias .main article p{
                 color:#777777;
             }
 
-            .single-post .main article a,            
+            .single-post .main article a,
             .page-template-noticias .main a{
                 color:#ff021a;
             }
+
+/*------------------
+// CASOS DE EXITO
+--------------------*/
+
+.page-template-casos_de_exito{
+    position:relative;
+}
+
+    .page-template-casos_de_exito .banner{
+        height:360px;
+        width:100%;
+        background-size:cover;
+        background-position:top center;
+        background-attachment: fixed;
+        text-align:center;
+        color:white;
+    }
+
+    .page-template-casos_de_exito .banner h1{
+        margin:0 0 1em;
+        padding-top:3em;
+        font-size:2em;
+    }
+
+    .page-template-casos_de_exito .list-cases article{
+        height:300px;
+        background-size:cover;
+    }
+/*Single caso*/
+
+.single-caso-exito{
+    position:relative;
+}
+
+    .single-caso-exito .first-container{
+        background-color:#d5d4d5;
+        color:#000;
+        text-align:center;
+        padding: 2em 0;
+    }
+
+        .single-caso-exito .first-container p{
+            line-height:1.8;
+        }
+
+    .single-caso-exito .second-container {
+        background-color:#fff;
+        padding: 2em 0;
+    }
+
+        .single-caso-exito .second-container img{
+            display:block;
+            max-width:100%;
+            height:auto;
+            margin:0 auto 2em;
+        }
