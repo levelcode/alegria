@@ -4,14 +4,32 @@
 	*/
 	get_header();
 ?>
-<div class="container-fluid">
+<div class="container-fluid news-main no-gutter">
     <div class="row">
-        <div class="col-xs-12 portafolio">
-        </div>
-        <div class="col-xs-12 mapa">
-            <div class="img_mapa"><img src="<?php bloginfo('template_url')?>/assets/mapa.png"></div>
-            <div class="paises">España <span class="separatas">-</span> Colombia <span class="separatas">-</span> Ecuador <span class="separatas">-</span> Chile <span class="separatas">-</span> Perú <span class="separatas">-</span> Polonia <span class="separatas">-</span> Marruecos <span class="separatas">-</span> Francia <span class="separatas">-</span> Angola <span class="separatas">-</span> Polska</div>
-        </div>
+
+    <?php
+        //Sidebar Query
+        while(have_posts()):the_post();
+
+        //Get url of thumbnail
+        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+        $url = $thumb['0'];
+    ?>
+        <div class="side-news col-md-4" style="background-image: url(<?php echo $url; ?>);">
+            <h2><?php the_title();?></h2>
+         </div>
+    <?php
+        endwhile;
+        wp_reset_postdata();
+    ?>
+
+    <!--
+        News list
+    -->
+    <div class="main list-news col-md-8">
+        <?php get_template_part('includes/loops/news-list'); ?>
+    </div>
+        
     </div>
 </div>
 <?php get_footer();?>
