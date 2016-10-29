@@ -29,7 +29,7 @@
                 $elemento .= '<div class="titulos2">';
                 $elemento .= '<h1>'.$page->post_title.'</h1>';
                 $elemento .= '<p>'.$subtitulo[0].'</p>';
-                $elemento .= '<div class="ver_mas" data-link="'.get_page_link( $page->ID ).'">ver más</div>';
+                $elemento .= '<div class="ver_mas" data-link="'.wp_make_link_relative(get_page_link( $page->ID )).'">ver más</div>';
                 $elemento .= '</div>';
                 $elemento .= '</div>';
                 $elemento .= '</div>';

@@ -101,7 +101,7 @@ header .navbar-form{
 #menu-principal{
     margin: 0 auto;
     float: none !important;
-    width: 470px;
+    width: 490px;
 }
 #menu-principal .dropdown-menu{
    font-size: 12px;
@@ -188,6 +188,10 @@ header .navbar-form{
     box-shadow: 0 0 10px -3px black;
     padding: 10px;
     overflow: hidden;
+    transition-property: filter;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+
 }
 .obj_jumbo:hover {
     -webkit-filter: grayscale(0%);
@@ -304,6 +308,13 @@ header .navbar-form{
 }
 
 @media screen and (min-width: 768px) {
+    .obj_jumbo {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
     .home .obj_jumbo {
         height: calc(33% - 23px);
     }
@@ -317,10 +328,10 @@ header .navbar-form{
         margin-bottom: 30px;
     }
 }
-/* interna 1 */
+/* Que hacemos */
 
 
-.fullh img {
+.fullh .attachment-full{
     width: auto;
     height: auto;
     position: absolute;
@@ -359,7 +370,7 @@ header .navbar-form{
     text-transform: initial;
 
 }
-.quehacemos .row:nth-child(1):hover, .quehacemos, .quehacemos .fullh:hover{
+.quehacemos .row:nth-child(1):hover, .quehacemos .fullh:hover{
     cursor:pointer;
 }
 .fullh .titulos1{
@@ -391,9 +402,29 @@ header .navbar-form{
     width:40px;
     border:solid 1px red;
 }
+.link_bullet{
+    height: auto;
+    display: inline-block;
+    text-align: center;
+}
+.link_bullet p{
+    position: absolute;
+    margin-top: -30px;
+    color: white;
+    text-align: center;
+    width: 170px;
+}
 
 @media screen and (min-width: 768px) {
     .quehacemos .row:nth-child(1), .quehacemos, .quehacemos .fullh{
+        height: calc(100% - 24px);
+        margin-bottom: -68px;
+    }
+    .quehacemos_L2 .row:nth-child(1), .quehacemos_L2, .quehacemos_L2 .fullh{
+        height: calc(100% - 24px);
+        margin-bottom: -68px;
+    }
+    .quehacemos_L3 .row:nth-child(1), .quehacemos_L3, .quehacemos_L3 .fullh{
         height: calc(100% - 24px);
         margin-bottom: -68px;
     }
@@ -401,7 +432,7 @@ header .navbar-form{
     .fullh h1{
 
     }
-    .fullh img{
+    .fullh .attachment-full{
         position: absolute;
         right: 0px;
         top: 0px;
