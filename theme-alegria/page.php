@@ -2,7 +2,7 @@
     get_header()
 ?>
 
-<div class="container-fluid news-main no-gutter">
+<div class="container-fluid news-main page-single no-gutter">
     <div class="row">
 
     <?php
@@ -14,7 +14,7 @@
         $url = $thumb['0'];
     ?>
         <div class="side-news col-md-4" style="background-image: url(<?php echo $url; ?>);">
-            <h2>NOTICIAS</h2>
+            <h2><?php the_title(); ?></h2>
          </div>
 
     <!--
@@ -23,7 +23,6 @@
     <div class="main list-news col-md-8">
         <div class="main">
             <article>
-                <h3><?php the_title()?></h3>
                 <?php the_content();?>
             </article>
         </div>

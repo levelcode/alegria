@@ -11,8 +11,10 @@
     $url = $thumb['0'];
 ?>
 	<article class="case-item col-md-3" style="background-image: url(<?php echo $url; ?>)">
-		<h3><?php the_title(); ?></h3>
-		<a href="<?php the_permalink();?>">Ver más</a>
+		<div class="overlay">
+			<h3><?php the_title(); ?></h3>
+			<a href="<?php the_permalink();?>" class="bottom">Ver más</a>
+		</div>
 	</article>
 <?php
 	endwhile;
