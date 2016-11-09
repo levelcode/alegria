@@ -9,6 +9,7 @@ require_once locate_template('/functions/search.php');
 require_once locate_template('/functions/wp_bootstrap_navwalker.php');
 
 add_action('after_setup_theme', 'true_load_theme_textdomain');
+add_theme_support('post-thumbnails'); 
 
 
 function true_load_theme_textdomain(){

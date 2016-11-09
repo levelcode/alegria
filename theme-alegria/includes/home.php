@@ -19,17 +19,19 @@
             $pages = get_pages($args); 
             foreach ( $pages as $page ) {
                 $ancho = get_post_meta($page->ID, 'ancho' );
-                $fondo = get_post_meta($page->ID, 'fondo' );
+                $fondo = get_the_post_thumbnail_url($page->ID, 'post-thumbnail');
                 $icono = get_post_meta($page->ID, 'icono' );
                 $subtitulo = get_post_meta($page->ID, 'subtitulo' );
 
-                $elemento = '<div class="'.$ancho[0].' '.$fondo[0].' obj_jumbo">';
+                $elemento = '<div class="'.$ancho[0].' obj_jumbo" style="background-image:url('.$fondo.')">';
+                $elemento .= '<div class="overlay">';
                 $elemento .= '<div class="titulos1">';
                 $elemento .= '<div class="icono"><i class="fa '.$icono[0].'"></i></div>';
                 $elemento .= '<div class="titulos2">';
                 $elemento .= '<h1>'.$page->post_title.'</h1>';
                 $elemento .= '<p>'.$subtitulo[0].'</p>';
                 $elemento .= '<div class="ver_mas" data-link="'.wp_make_link_relative(get_page_link( $page->ID )).'">ver más</div>';
+                $elemento .= '</div>';
                 $elemento .= '</div>';
                 $elemento .= '</div>';
                 $elemento .= '</div>';
