@@ -6,7 +6,7 @@
 ?>
 <div class="container-fluid quehacemos_L2">
 	<div class="row">
-        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
+        <div class="col-xs-12 col-sm-4 obj_jumbo fullh contenido">
         <h1><?php single_post_title();?></h1>
         <?php
             if(has_post_thumbnail()) {
@@ -18,7 +18,7 @@
         ?>
             
         </div>
-        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
+        <div class="col-xs-12 col-sm-8 obj_jumbo fullh contenido">
             <div class="texto">
             <h2><?php the_title() ?></h2> 
             <?php 
