@@ -716,7 +716,11 @@ header .navbar-form{
             max-width:582px;
             border-radius:4px;
             border:1px solid #ccc;
-            margin:1em 0;
+            margin:.5em 0;
+        }
+
+        .page-template-default form textarea{
+            max-height: 122px;
         }
 
         .page-template-default form input[type="submit"]{
