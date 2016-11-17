@@ -122,6 +122,7 @@ header{
     padding: 7px 6px;
     font-weight: 100;
     height: auto;
+    font-size: 12px;
     border-bottom: solid 2px transparent;
     letter-spacing: 0.4px;
 }
@@ -196,7 +197,7 @@ header .navbar-form{
 .navbar-default .navbar-toggle {
     border: none;
     margin: 0 auto;
-    margin-top: 18px;
+    margin-top: 23px;
     margin-right: calc(50% - 40px);
 }
 #menu-principal{
@@ -228,6 +229,10 @@ header .navbar-form{
     right: 0px;
     top: 69px;
 }
+.alegria-100p iframe{
+    width: 100%;
+    height: 600px;
+}
 iframe {
     width: 100%;
     height: 360px;
@@ -244,11 +249,19 @@ iframe {
 }
 
 @media screen and (min-width: 768px) {
+    .custom-logo-link img{
+        width: 200px;
+        height: auto;
+        padding: 10px 30px;
+        margin-top: 14px;
+    }
+    
     #menu-principal{
         margin: 0 auto;
         float: none !important;
         width: 100%;
-        
+        position: absolute;
+        margin-left: calc(50% - 202px);
     }
     .obj_jumbo {
         height: calc(33% - 45px);
@@ -259,12 +272,11 @@ iframe {
     .navbar-default .navbar-nav>li>a {
         height: 95px;
         line-height: 79px;
-        padding: 7px 2px;
+        padding: 7px 4px;
     }
 }
 @media screen and (min-width: 800px) {
     #menu-principal{
-        margin: 0 auto;
         float: none !important;
         width: 520px;
     }
@@ -272,6 +284,12 @@ iframe {
 @media screen and (min-width: 992px) {
     .navbar-default .navbar-nav>li>a {
         padding: 7px 6px;
+    }
+    #menu-principal{
+        margin: 0 auto;
+        float: none !important;
+        position: absolute;
+        margin-left: calc(50% - 256px);
     }
 }
 
@@ -303,7 +321,7 @@ iframe {
     float: left;
 }
 .menu-footer-container{
-    width: 415px;
+    width: 466px;
     height: 30px;
     display: inline-block;
 }
@@ -318,7 +336,7 @@ iframe {
 }
 
 .social-footer  ul li a i {
-    color: #fff;
+    color: #888888;
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -326,6 +344,9 @@ iframe {
     text-align: center;
     margin-right: 10px;
     padding-top: 15%;
+}
+.social-footer  ul li a i:hover{
+    color:red;
 }
 
 
