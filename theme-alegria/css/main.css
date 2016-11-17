@@ -251,8 +251,8 @@ header .navbar-form{
     font-size: 20px;
 }
 .titulos1{
-    margin-left: 20px;
-    margin-top: 122px;
+    margin-left: 31px;
+    margin-top: 49px;
     position: relative;
     padding-left: 53px;
 }
@@ -325,7 +325,7 @@ header .navbar-form{
     font-weight: 100;
     cursor: pointer;
     text-align: center;
-    margin-top: 54px;
+    margin-top: 16px;
     transition: all .3s ease;
 }
 .ver_mas:hover{
@@ -406,7 +406,6 @@ header .navbar-form{
     }
     .home .obj_jumbo {
         height: calc(33% - 23px);
-        min-height:400px;
     }
     .home .row:nth-child(2), .home, .home .fullh{
         height: calc(100% - 24px);
@@ -522,9 +521,9 @@ header .navbar-form{
 }
 .quehacemos_L3 .texto{
     max-width: 739px;
-    margin: 30px auto;
+    margin: 40px auto;
     text-align: left;
-    padding: 10px;
+    padding: 50px 20px;
     font-weight: 500;
     border-top: solid 1px red;
 }
@@ -541,7 +540,7 @@ header .navbar-form{
         overflow-x: hidden;
     }
     .quehacemos_L3 .row:nth-child(1), .quehacemos_L3, .quehacemos_L3 .fullh{
-        height: 100%;
+        height: auto;
         margin-bottom: -68px;
     }
 
@@ -654,7 +653,7 @@ header .navbar-form{
     .page-template-casos_de_exito .list-cases article{
         height:300px;
         background-size:cover;
-        transition: all .5s ease;
+        transition: all .4s ease;
     }
 
     .page-template-casos_de_exito .list-cases article:hover{

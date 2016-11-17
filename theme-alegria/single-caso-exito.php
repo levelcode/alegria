@@ -1,34 +1,29 @@
 <?php
-    get_header()
+    get_header();
+
+    while(have_posts()):the_post();
 ?>
-
-<div class="container-fluid news-main no-gutter">
+<div class="container-fluid quehacemos_L3">
     <div class="row">
-
-    <?php
-        //Sidebar Query
-        while(have_posts()):the_post();
-    ?>
-    <div class="first-container">
-        <div class="container">
-            <h2><?php the_title(); ?></h2>
-            <?php the_content(); ?>
+        <div class="col-xs-12 quehacemos_contenedor">
+            <h1><?php the_title();?></h1>
+            <?php
+            echo types_render_field('second-box');
+            ?>
+            
         </div>
-    </div>
-
-    <div class="second-container">+
-        <div class="container">
-            <?php echo types_render_field('second-box'); ?>
+        <div class="col-xs-12">
+            <div class="texto">
+            <?php 
+                $content = the_content(); 
+                echo '<div class="parr_1">'.$content.'</div>';  
+            ?>
+            </div>
         </div>
-    </div>
-
-    <?php
-        endwhile;
-        wp_reset_postdata();
-    ?>
     </div>
 </div>
-
-<?php
+<?php 
+    endwhile;
+    wp_reset_postdata();
     get_footer();
 ?>
