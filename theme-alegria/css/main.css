@@ -255,7 +255,7 @@ iframe {
         padding: 10px 30px;
         margin-top: 14px;
     }
-    
+
     #menu-principal{
         margin: 0 auto;
         float: none !important;
@@ -300,7 +300,7 @@ iframe {
         padding: 10px;
         margin-top: 0px;
     }
-    
+
 }
 @media (max-width: 767px){
     .navbar .navbar-nav .open .dropdown-menu>.active>a, .navbar .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar .navbar-nav .open .dropdown-menu>.active>a:focus {
@@ -522,7 +522,7 @@ iframe {
 
 @media screen and (min-width: 768px) {
     .obj_jumbo {
-       
+
     }
     .home .obj_jumbo {
         height: calc(33% - 23px);
@@ -686,17 +686,24 @@ iframe {
 .page-template-noticias,
 .single-post{
     background-color:#fff;
+    height: auto;
+}
+
+body.single-post{
+    height:auto;
 }
 
     .page-template-default .container-fluid,
-    .single-post .container-fluid,
-    .single-post .row,
     .page-template-noticias .container-fluid,
     .page-template-default .row,
     .page-template-noticias .row,
      .page-template-default .main{
-        height: 100%;
+        height: auto;
+    }
 
+    .single-post .container-fluid,
+    .single-post .row{
+        height:auto;
     }
 
     .page-template-default .side-news,
@@ -706,12 +713,14 @@ iframe {
         background-size: cover;
         background-position: center;
         background-color:#666;
+        min-height: 700px;
     }
 
         .single-post .side-news h2,
         .page-template-noticias .side-news h2{
             color:#fff;
-            margin: 50px;
+            padding: 50px;
+            margin:0;
             text-transform: uppercase;
         }
 
@@ -720,6 +729,8 @@ iframe {
         height: 100%;
         background-color:#fff;
         padding-top: 30px;
+        max-width: 600px;
+        margin-left:50px;
     }
 
         .single-post .main article,
@@ -878,4 +889,21 @@ iframe {
 /*fix for contact*/
 .page-id-14 .side-news h2{
     display:none;
+}
+
+@media screen and (max-width: 768px) {
+    .page-template-default .side-news,
+    .single-post .side-news,
+    .page-template-noticias .side-news{
+        height: auto;
+        min-height: 300px;
+    }
+
+    body .main {
+        height: auto;
+        background-color: #fff;
+        padding-top: 30px;
+        max-width: 600px;
+        margin-left: 0 !important;
+    }
 }
