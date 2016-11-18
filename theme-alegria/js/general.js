@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 
   obj1.click(function() {
-    TweenMax.to(obj1, 0.4, {marginLeft:"33%",ease:Linear.easeInOut});
+    TweenMax.to(obj1, 0.4, {marginLeft:"0%",ease:Linear.easeInOut});
     TweenMax.to(obj2, 0.4, {opacity:"0",marginLeft:"-33%",ease:Linear.easeInOut});
     TweenMax.to(obj3, 0.4, {opacity:"0",marginLeft:"-33%",ease:Linear.easeInOut});
     obj2.off();
@@ -30,7 +30,7 @@ $(document).ready(function() {
   });
 
   obj2.click(function() {
-    TweenMax.to(obj1, 0.4, {opacity:"0",marginLeft:"33%",ease:Linear.easeInOut});
+    TweenMax.to(obj1, 0.4, {opacity:"0",marginLeft:"0%",ease:Linear.easeInOut});
     TweenMax.to(obj2, 0.4, {marginLeft:"-33%",ease:Linear.easeInOut});
     TweenMax.to(obj3, 0.4, {opacity:"0",marginLeft:"-33%",ease:Linear.easeInOut});
     obj1.off();
@@ -39,7 +39,7 @@ $(document).ready(function() {
   });
 
   obj3.click(function() {
-    TweenMax.to(obj1, 0.4, {opacity:"0",marginLeft:"33%",ease:Linear.easeInOut});
+    TweenMax.to(obj1, 0.4, {opacity:"0",marginLeft:"0%",ease:Linear.easeInOut});
     TweenMax.to(obj2, 0.4, {opacity:"0",marginLeft:"-33%",ease:Linear.easeInOut});
     TweenMax.to(obj3, 0.4, {marginLeft:"-33%",ease:Linear.easeInOut});
     obj1.off();

@@ -255,7 +255,16 @@ iframe {
         padding: 10px 30px;
         margin-top: 14px;
     }
-
+    header{
+        margin-bottom:-20px;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        top: 0px;
+    }
+    body .container-fluid:nth-child(3) {
+        margin-top: 97px;
+    }
     #menu-principal{
         margin: 0 auto;
         float: none !important;
@@ -419,7 +428,11 @@ iframe {
     transition:all .5s ease;
 }
 .obj_jumbo .overlay:hover {
-    background:rgba(255,0,0,0.35);
+    background: -moz-linear-gradient(45deg,  rgba(255,50,54,0.69) 0%, rgba(255,0,4,0.4) 23%, rgba(255,0,4,0) 55%);
+    background: -webkit-linear-gradient(45deg,  rgba(255,50,54,0.69) 0%,rgba(255,0,4,0.4) 23%,rgba(255,0,4,0) 55%);
+    background: linear-gradient(45deg,  rgba(255,50,54,0.69) 0%,rgba(255,0,4,0.4) 23%,rgba(255,0,4,0) 55%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0ff3236', endColorstr='#00ff0004',GradientType=1 );
+
 }
 .obj_jumbo:hover{
     transform:scale(1.02);
@@ -647,9 +660,25 @@ iframe {
     font-weight: 500;
     border-top: solid 1px red;
 }
+.contacto_l2{
+    background-color: white;
+    text-align: left;
+    padding: 30px;
+    text-shadow: none;
+    color: black;
+    min-height: 700px;
+}
+.contacto{
+    min-height: 700px;
+}
 
 @media screen and (min-width: 768px) {
-    .quehacemos .row:nth-child(1), .quehacemos, .quehacemos .fullh{
+    .contacto .row:nth-child(1), .contacto, .contacto .fullh {
+        height: calc(100% - 24px);
+        margin-bottom: -68px;
+        overflow-x: hidden;
+    }
+    .quehacemos .row:nth-child(1), .quehacemos, .quehacemos .fullh {
         height: calc(100% - 24px);
         margin-bottom: -68px;
         overflow-x: hidden;
@@ -804,7 +833,11 @@ body.single-post{
         transition:all .5s ease;
     }
         .page-template-casos_de_exito .list-cases article .overlay:hover{
-            background-color: rgba(255,0,0,.6);
+            background: -moz-linear-gradient(45deg,  rgba(255,50,54,0.69) 0%, rgba(255,0,4,0.4) 23%, rgba(255,0,4,0) 55%);
+            background: -webkit-linear-gradient(45deg,  rgba(255,50,54,0.69) 0%,rgba(255,0,4,0.4) 23%,rgba(255,0,4,0) 55%);
+            background: linear-gradient(45deg,  rgba(255,50,54,0.69) 0%,rgba(255,0,4,0.4) 23%,rgba(255,0,4,0) 55%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0ff3236', endColorstr='#00ff0004',GradientType=1 );
+
             transition:all .5s ease;
         }
 
@@ -859,13 +892,13 @@ body.single-post{
     position:relative;
 }
 
-    .page-template-default .page-single .row{
+    .contacto .page-single .row{
         background-color:white;
     }
 
-        .page-template-default form input[type="text"],
-        .page-template-default form input[type="email"],
-        .page-template-default form textarea{
+        .contacto form input[type="text"],
+        .contacto form input[type="email"],
+        .contacto form textarea{
             padding:1em;
             width:100%;
             max-width:582px;
@@ -874,11 +907,11 @@ body.single-post{
             margin:.5em 0;
         }
 
-        .page-template-default form textarea{
+        .contacto form textarea{
             max-height: 122px;
         }
 
-        .page-template-default form input[type="submit"]{
+        .contacto form input[type="submit"]{
             padding:10px;
             color:white;
             text-align:center;
