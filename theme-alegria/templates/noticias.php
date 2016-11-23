@@ -4,32 +4,27 @@
 	*/
 	get_header();
 ?>
-<div class="container-fluid news-main no-gutter">
+<div class="container-fluid quehacemos_L2 noticias-home">
     <div class="row">
-
-    <?php
-        //Sidebar Query
-        while(have_posts()):the_post();
-
-        //Get url of thumbnail
-        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-        $url = $thumb['0'];
-    ?>
-        <div class="side-news col-md-4" style="background-image: url(<?php echo $url; ?>);">
-            <h2><?php the_title();?></h2>
-         </div>
-    <?php
-        endwhile;
-        wp_reset_postdata();
-    ?>
-
-    <!--
-        News list
-    -->
-    <div class="main list-news col-md-8">
-        <?php get_template_part('includes/loops/news-list'); ?>
-    </div>
-        
+        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
+        <h1>NOTICIAS</h1>
+        <?php
+            if(has_post_thumbnail()) {
+                 $feature_image = get_the_post_thumbnail($post->ID, 'full'); 
+                 echo $feature_image;
+            }else{
+                echo "No ha asignado una Imagen Destacada.";
+            }
+        ?>
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
+            <div class="texto">
+                <div class="main list-news col-md-8">
+                    <?php get_template_part('includes/loops/news-list'); ?>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <?php get_footer();?>

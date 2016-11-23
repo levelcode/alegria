@@ -522,7 +522,7 @@ iframe {
     background: #2f2c33;
     padding: 40px;
     box-shadow: 0 0 41px -5px black;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .home .icono{
@@ -684,11 +684,15 @@ iframe {
         overflow-x: hidden;
     }
     .quehacemos_L2 .row:nth-child(1), .quehacemos_L2, .quehacemos_L2 .fullh{
-        height: calc(100% - 24px);
+        height: calc(100% - 0px);
         margin-bottom: -68px;
         overflow-x: hidden;
     }
     .quehacemos_L3 .row:nth-child(1), .quehacemos_L3, .quehacemos_L3 .fullh{
+        height: auto;
+        margin-bottom: -68px;
+    }
+    .noticias .row:nth-child(1), .noticias, .noticias .fullh{
         height: auto;
         margin-bottom: -68px;
     }
@@ -711,29 +715,6 @@ iframe {
 /*------------------
 // NOTICIAS
 --------------------*/
-.page-template-default,
-.page-template-noticias,
-.single-post{
-    background-color:#fff;
-    height: auto;
-}
-
-body.single-post{
-    height:auto;
-}
-
-    .page-template-default .container-fluid,
-    .page-template-noticias .container-fluid,
-    .page-template-default .row,
-    .page-template-noticias .row,
-     .page-template-default .main{
-        height: auto;
-    }
-
-    .single-post .container-fluid,
-    .single-post .row{
-        height:auto;
-    }
 
     .page-template-default .side-news,
     .single-post .side-news,
@@ -757,9 +738,8 @@ body.single-post{
     .page-template-noticias .main{
         height: 100%;
         background-color:#fff;
-        padding-top: 30px;
         max-width: 600px;
-        margin-left:50px;
+        font-size: 14px;
     }
 
         .single-post .main article,
@@ -940,3 +920,33 @@ body.single-post{
         margin-left: 0 !important;
     }
 }
+
+/* Galería */
+.fiv-inner{
+   width:60%;
+   min-width: 360px;
+   background-color: #000 !important;
+}
+.fiv-next{
+        position: absolute !important;
+    top: calc(50% - 40px);
+    right: 10px;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    background-color: rgba(0,0,0,0.4) !important;
+}
+.fiv-prev{
+    position: absolute !important;
+    top: calc(50% - 40px);
+    left: 10px;
+    border: none !important;
+    color: #ffffff  !important;
+    background-color: rgba(0,0,0,0.4) !important;
+}
+.fiv-count{
+   display:none;
+}
+.fiv-inner-container{
+   border:none !important;
+}
+.foogallery-image-viewer > .fiv-inner > .fiv-inner-container > a > img {margin: 0 auto;}

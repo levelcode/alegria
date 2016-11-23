@@ -1,42 +1,51 @@
 <?php
-    get_header()
+    get_header();
 ?>
-
-<div class="container-fluid news-main no-gutter">
+<div class="container-fluid quehacemos_L2">
     <div class="row">
-
-    <?php
-        //Sidebar Query
-        while(have_posts()):the_post();
-
-        //Get url of thumbnail
-        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-        $url = $thumb['0'];
-    ?>
-        <div class="side-news col-md-4" style="background-image: url(<?php echo $url; ?>);">
-            <h2>NOTICIAS</h2>
-         </div>
-
-    <!--
-        News item
-    -->
-    <div class="main list-news col-md-8">
-        <div class="main">
-            <article>
-                <h3><?php the_title()?></h3>
-                <?php the_content();?>
-            </article>
+        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
+        <h1>NOTICIAS</h1>
+        <?php
+            if(has_post_thumbnail()) {
+                 $feature_image = get_the_post_thumbnail($post->ID, 'full'); 
+                 echo $feature_image;
+            }else{
+                echo "No ha asignado una Imagen Destacada.";
+            }
+        ?>
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
+            <div class="texto">
+            <h2><?php the_title() ?></h2> 
+            <?php 
+                $postID = get_the_ID();
+                $post = get_post($postID); 
+                $content = apply_filters('the_content', $post->post_content); 
+                echo '<div class="parr_1">'.$content.'</div>';  
+            ?>
+            <?php
+                $args = array(
+                    'post_parent' => $postID,
+                    'order'=> 'ASC',
+                    'sort_column' => 'menu_order',
+                    'post_status' => 'publish',
+                    'parent' => 0
+                );
+                $pages = get_children($args);
+                $elemento = "";
+                
+                foreach ( $pages as $page ) {
+                    $elemento .= '<a class="link_bullet" href="'.get_page_link( $page->ID ).'">';
+                    $elemento .= get_the_post_thumbnail($page->ID, 'thumbnail');
+                    $elemento .= '<p>'.$page->post_title.'</p>';
+                    $elemento .= '</a>';
+                } 
+                echo $elemento; 
+            ?>
+            
+            </div>
         </div>
     </div>
-
-    <?php
-        endwhile;
-        wp_reset_postdata();
-    ?>
-
-    </div>
 </div>
-
-<?php
-    get_footer();
-?>
+<?php get_footer();?>
