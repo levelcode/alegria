@@ -4,6 +4,16 @@
 	*/
 	get_header();
 ?>
+<div class="container-fluid frase_cont">
+    
+        <div class="col-xs-12 frase">
+            <div>
+                <p class="primera">Movemos Emociones</p>
+            </div>
+            
+        </div>
+    
+</div>
 <div class="container-fluid success">
     <div class="row">
         <?php

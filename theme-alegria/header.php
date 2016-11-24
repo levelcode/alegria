@@ -42,18 +42,24 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
                         <form  class="navbar-form navbar-right hidden-xs" role="search">
                             <ul class="nav pull-right">
-                                <div class="main-search">
-                                    <button class="btn btn-search" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                      <i class="fa fa-search"></i>
-                                    </button>
-                                    <div class="search-box collapse" id="collapseExample">
-                                            <div class="well search-well">
-                                            <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                                <input type="text" class="form-control" placeholder="Buscar" value="<?php echo get_search_query(); ?>" name="s">
-                                            </form>
-                                            </div>
+                                <li>
+                                    <div class="main-search">
+                                        <button class="btn btn-search" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                          <i class="fa fa-search"></i>
+                                        </button>
+                                        <div class="search-box collapse" id="collapseExample">
+                                                <div class="well search-well">
+                                                <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                                    <input type="text" class="form-control" placeholder="Buscar" value="<?php echo get_search_query(); ?>" name="s">
+                                                </form>
+                                                </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17">
+                                    <a title="EN" href="/en">EN</a>
+                                </li>
+                                
                             </ul>
                         </form>
                         <?php
@@ -66,9 +72,14 @@
                                 'walker'            => new wp_bootstrap_navwalker())
                             );
                         ?>
-
                     </div> <!-- /.end of collaspe navbar-collaspe -->
                 </div> <!-- /.end of container -->
             </nav>
         </section> <!-- /.end of section -->
+        <div class="breadcrumbs hidden-xs" typeof="BreadcrumbList" vocab="http://schema.org/">
+            <?php if(function_exists('bcn_display'))
+            {
+                bcn_display();
+            }?>
+        </div>
     </header>

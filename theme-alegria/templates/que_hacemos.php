@@ -10,7 +10,17 @@
     $subtitulo = get_post_meta($post->ID, 'subtitulo' );
 
 ?>
-<div class="container-fluid quehacemos">  
+<div class="container-fluid frase_cont">
+    
+        <div class="col-xs-12 frase">
+            <div>
+                <p class="primera">Movemos Emociones</p>
+            </div>
+            
+        </div>
+    
+</div>
+<div class="container-fluid quehacemos">
     <div class="row">
         <div class="col-xs-12 hidden-xs fullh modal_intro">
             <div class="modal_intro_texto">

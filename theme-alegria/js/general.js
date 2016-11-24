@@ -53,7 +53,7 @@ $(document).ready(function() {
       window.location.href = url;
     }, 1000);
   }
-	$('.ver_mas').click(function() {
+	$('.home_btn').click(function() {
 	  var url = String($(this).attr("data-link"));
 	  window.location.href = url;
 	});
@@ -67,6 +67,23 @@ $(document).ready(function() {
       $(this).hide();
     });
   }, 3000);
+
+  //Resize
+  var texto_h = "";
+  $(document).resize(resize_text());
+
+  function resize_text(){
+    setTimeout(function(){
+      texto_h = String(Number($('.texto')[0].scrollHeight + 140)+"px");
+      $('.contacto .row:nth-child(1), .contacto, .contacto .fullh').css( "height", texto_h);
+      $('.quehacemos_L2 .row:nth-child(1), .quehacemos_L2, .quehacemos_L2 .fullh').css( "height", texto_h);
+    }, 200);
+    
+  }
     
   	
 });
+
+
+
+

@@ -4,6 +4,16 @@
 	*/
 	get_header();
 ?>
+<div class="container-fluid frase_cont">
+    
+        <div class="col-xs-12 frase">
+            <div>
+                <p class="primera">Movemos Emociones</p>
+            </div>
+            
+        </div>
+    
+</div>
 <div class="container-fluid quehacemos_L2 noticias-home">
     <div class="row">
         <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
