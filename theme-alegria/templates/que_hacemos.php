@@ -10,25 +10,9 @@
     $subtitulo = get_post_meta($post->ID, 'subtitulo' );
 
 ?>
-<div class="container-fluid frase_cont">
-    
-        <div class="col-xs-12 frase">
-            <div>
-                <p class="primera">Movemos Emociones</p>
-            </div>
-            
-        </div>
-    
-</div>
+
 <div class="container-fluid quehacemos">
     <div class="row">
-        <div class="col-xs-12 hidden-xs fullh modal_intro">
-            <div class="modal_intro_texto">
-                <h1><?php echo $titulo;?></h1>
-                <hr>
-                <p><?php echo $subtitulo[0];?></p>
-            </div>
-        </div>
     	<?php 
     		
             $args = array(
@@ -60,5 +44,15 @@
             }  
         ?>
     </div>
+</div>
+<div class="container-fluid frase_cont">
+    
+        <div class="col-xs-12 frase">
+            <div>
+                <p class="primera">Movemos Emociones</p>
+            </div>
+            
+        </div>
+    
 </div>
 <?php get_footer();?>

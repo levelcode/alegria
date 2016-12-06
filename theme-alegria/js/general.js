@@ -53,7 +53,7 @@ $(document).ready(function() {
       window.location.href = url;
     }, 1000);
   }
-	$('.home_btn').click(function() {
+	$('.home_btn, .btn_cases').click(function() {
 	  var url = String($(this).attr("data-link"));
 	  window.location.href = url;
 	});
