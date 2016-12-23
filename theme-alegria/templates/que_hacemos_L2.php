@@ -3,18 +3,13 @@
 		Template name: ¿Que Hacemos? Nivel 2
 	*/
 	get_header();
+    $postID = get_the_ID();
+    $post = get_post($postID);
+    $fondo = get_the_post_thumbnail_url($page->ID, 'post-thumbnail');
 ?>
 <div class="container-fluid quehacemos_L2">
 	<div class="row">
-        <div class="col-xs-12 col-sm-4 obj_jumbo fullh contenido">
-        <?php
-            if(has_post_thumbnail()) {
-                 $feature_image = get_the_post_thumbnail($post->ID, 'full'); 
-                 echo $feature_image;
-            }else{
-                echo "No ha asignado una Imagen Destacada.";
-            }
-        ?>
+        <div class="col-xs-12 col-sm-4 obj_jumbo fullh contenido" style="background-image:url(<?php echo $fondo ?>)">
             
         </div>
         <div class="col-xs-12 col-sm-8 obj_jumbo fullh contenido">
@@ -49,5 +44,15 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container-fluid frase_cont">
+    
+        <div class="col-xs-12 frase">
+            <div>
+                <p class="primera">Movemos Emociones</p>
+            </div>
+            
+        </div>
+    
 </div>
 <?php get_footer();?>

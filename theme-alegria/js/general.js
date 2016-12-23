@@ -74,12 +74,33 @@ $(document).ready(function() {
 
   function resize_text(){
     setTimeout(function(){
-      texto_h = String(Number($('.texto')[0].scrollHeight + 140)+"px");
-      $('.contacto .row:nth-child(1), .contacto, .contacto .fullh').css( "height", texto_h);
-      $('.quehacemos_L2 .row:nth-child(1), .quehacemos_L2, .quehacemos_L2 .fullh').css( "height", texto_h);
+      if($('.texto')[0]){
+        texto_h = String(Number($('.texto')[0].scrollHeight + 140)+"px");
+        $('.contacto .row:nth-child(1), .contacto, .contacto .fullh').css( "height", texto_h);
+        $('.quehacemos_L2 .row:nth-child(1), .quehacemos_L2, .quehacemos_L2 .fullh').css( "height", texto_h);
+        console.log("si-texto");
+      }else{
+        console.log("no-texto");
+      }
+      
     }, 200);
     
   }
+  $('#contacto-select').on('change', function() {
+    window.location.href = this.value;
+  })
+  /*Idioma*/
+
+  $('.idioma-p').click(function() {
+    $('.idioma-ul').show();
+  });
+  $('.idioma-s').click(function() {
+    $('.idioma-ul').hide();
+    var selected = $(this).text();
+    $('.idioma-p').text(selected);
+  });
+
+  
     
   	
 });

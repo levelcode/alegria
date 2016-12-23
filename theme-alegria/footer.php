@@ -24,7 +24,7 @@
 					<li><a href="http://plus.google.com/"><i class="fa fa-youtube"></i> </a></li>
 				</ul>
 	    	</div>
-			<p>COPYRIGHT © 2016 ALEGRIA ACTIVITY. Todos los Derechos Reservados <br> Prohibida su reproducción total o parcial, así como su traducción a cualquier idioma sin autorización escrita de su titular. </p>
+			<p>COPYRIGHT © 2016 ALEGRIA ACTIVITY. Todos los Derechos Reservados <br> Prohibida su reproducción total o parcial, así como su traducción a cualquier idioma sin autorización escrita de su titular. <a href="http://lacasaaccesible.es/?page_id=47">Términos y Condiciones</a></p>
 		</div>
 	</div>
 

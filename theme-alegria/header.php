@@ -56,8 +56,26 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17">
-                                    <a title="EN" href="/en">EN</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17 menu-idioma">
+                                    <a class="idioma-p" title="EN" href="#">EN</a>
+                                    <ul class="idioma-ul">
+                                        <li>
+                                            <a class="idioma-s" title="EN" href="#">EN</a>
+                                        </li>
+                                        <li>
+                                            <a class="idioma-s" title="ES" href="#">ES</a>
+                                        </li>
+                                        <li>
+                                            <a class="idioma-s" title="PT" href="#">FR</a>
+                                        </li>
+                                        <li>
+                                            <a class="idioma-s" title="PT" href="#">PT</a>
+                                        </li>
+                                        <li>
+                                            <a class="idioma-s" title="PT" href="#">PL</a>
+                                        </li>
+                                    </ul>
+                                    
                                 </li>
                                 
                             </ul>

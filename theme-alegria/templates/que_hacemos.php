@@ -17,8 +17,7 @@
     		
             $args = array(
             	'post_parent' => $postID,
-                'sort_order' => 'desc',
-                'sort_column' => 'menu_order',
+                'order' => 'ASC',
                 'post_status' => 'publish',
                 'parent' => 0
             );

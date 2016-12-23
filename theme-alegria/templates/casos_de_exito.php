@@ -4,16 +4,7 @@
 	*/
 	get_header();
 ?>
-<div class="container-fluid frase_cont">
-    
-        <div class="col-xs-12 frase">
-            <div>
-                <p class="primera">Movemos Emociones</p>
-            </div>
-            
-        </div>
-    
-</div>
+
 <div class="container-fluid success">
     <div class="row">
         <?php
@@ -38,5 +29,15 @@
             <?php get_template_part('includes/loops/cases-list'); ?>
         </div>
     </div>
+</div>
+<div class="container-fluid frase_cont">
+    
+        <div class="col-xs-12 frase">
+            <div>
+                <p class="primera">movemos emociones</p>
+            </div>
+            
+        </div>
+    
 </div>
 <?php get_footer();?>
