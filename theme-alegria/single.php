@@ -1,24 +1,21 @@
 <?php
     get_header();
+    $postID = get_the_ID();
+    $post = get_post($postID);
+    $fondo = get_the_post_thumbnail_url($page->ID, 'large');
 ?>
 
 <div class="container-fluid quehacemos_L2">
     <div class="row">
-        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
-        <h1>NOTICIAS</h1>
-        <?php
-            if(has_post_thumbnail()) {
-                 $feature_image = get_the_post_thumbnail($post->ID, 'full'); 
-                 echo $feature_image;
-            }else{
-                echo "No ha asignado una Imagen Destacada.";
-            }
-        ?>
+        
+        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido" style="background-image:url(<?php echo $fondo ?>)">
             
         </div>
         <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
             <div class="texto">
-            <h2><?php the_title() ?></h2> 
+            <h2>NOTICIAS</h2>
+            <h2><?php the_title() ?></h2>
+            <br>
             <?php 
                 $postID = get_the_ID();
                 $post = get_post($postID); 

@@ -4,7 +4,6 @@
 	*/
 	get_header();
 ?>
-
 <div class="container-fluid quehacemos_L3">
 	<div class="row">
         <div class="col-xs-12 quehacemos_contenedor">
@@ -12,7 +11,7 @@
             <?php
             //wp_get_post_parent_id( $post_ID );
                 if(has_post_thumbnail()) {
-                     $feature_image = get_the_post_thumbnail($post->ID, 'full'); 
+                     $feature_image = get_the_post_thumbnail($post->ID, 'large'); 
                      echo $feature_image;
                 }else{
                     echo "No ha asignado una Imagen Destacada.";

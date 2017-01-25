@@ -27,7 +27,7 @@
                 foreach ( $pages as $page ) {
                     $i++;
                     $ancho = get_post_meta($page->ID, 'ancho' );
-                    $fondo = get_the_post_thumbnail_url($page->ID, 'post-thumbnail');
+                    $fondo = get_the_post_thumbnail_url($page->ID, 'large');
                     $subtitulo = get_post_meta($page->ID, 'subtitulo' );
 
                     $elemento = '<div class="'.$ancho[0].' '.$fondo[0].' obj_jumbo fullh" id="obj'.$i.'" data-link="'.get_page_link( $page->ID ).'" style="background-image:url('.$fondo.')">';

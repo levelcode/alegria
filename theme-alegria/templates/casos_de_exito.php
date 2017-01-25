@@ -12,7 +12,7 @@
             while(have_posts()):the_post();
 
             //Get url of thumbnail
-            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
             $url = $thumb['0'];
         ?>
         <div class="banner" style="background-image: url(<?php echo $url; ?>)">

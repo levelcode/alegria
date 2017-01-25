@@ -5,15 +5,16 @@
 	get_header();
     $postID = get_the_ID();
     $post = get_post($postID);
-    $fondo = get_the_post_thumbnail_url($page->ID, 'post-thumbnail');
+    $fondo = get_the_post_thumbnail_url($page->ID, 'large');
 ?>
 <div class="container-fluid quehacemos_L2">
 	<div class="row">
-        <div class="col-xs-12 col-sm-4 obj_jumbo fullh contenido" style="background-image:url(<?php echo $fondo ?>)">
+        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido" style="background-image:url(<?php echo $fondo ?>)">
             
         </div>
-        <div class="col-xs-12 col-sm-8 obj_jumbo fullh contenido">
+        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contenido">
             <div class="texto">
+            <br>
             <h2><?php the_title() ?></h2> 
             <?php 
                 $postID = get_the_ID();

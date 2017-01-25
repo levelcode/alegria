@@ -19,7 +19,7 @@
             $pages = get_pages($args); 
             foreach ( $pages as $page ) {
                 $ancho = get_post_meta($page->ID, 'ancho' );
-                $fondo = get_the_post_thumbnail_url($page->ID, 'post-thumbnail');
+                $fondo = get_the_post_thumbnail_url($page->ID, 'large');
                 $icono = get_post_meta($page->ID, 'icono' );
                 $subtitulo = get_post_meta($page->ID, 'subtitulo' );
 

@@ -6,22 +6,22 @@
 
     $postID = get_the_ID();
     $post = get_post($postID); 
-    $mapa = get_the_post_thumbnail_url($post->ID, 'post-thumbnail');
+    $mapa = get_the_post_thumbnail_url($post->ID, 'large');
 ?>
 
 <div class="container-fluid contacto">
     <div class="row">
-        <div class="col-xs-12 col-sm-4 obj_jumbo hidden-xs fullh contacto_l2" style="background-image:url(https://alegria-activity.tk/wp-content/uploads/2016/10/map.jpg)">    
+        <div class="col-xs-12 col-sm-6 obj_jumbo hidden-xs fullh contacto_l2" style="background-image:url(<?php echo $mapa ?>)">    
         </div>
-        <div class="col-xs-12 col-sm-8 obj_jumbo fullh contacto_l2">
+        <div class="col-xs-12 col-sm-6 obj_jumbo fullh contacto_l2">
             <div class="texto">
             <h2>Contacto</h2>
             <h4>Seleccione su país</h4> 
             <?php
                 $args = array(
                     'post_parent' => 14,
-                    'order'=> 'DESC',
-                    'sort_column' => 'menu_order',
+                    'order'=> 'ASC',
+                    'orderby' => 'menu_order', 
                     'post_status' => 'publish',
                     'parent' => 0
                 );
@@ -45,7 +45,7 @@
                 
 
                 $content = apply_filters('the_content', $post->post_content);
-                $formulario = do_shortcode( '[contact-form-7 id="97" title="España]' );
+                $formulario = do_shortcode( '[contact-form-7 id="472" title="Global"]' );
                 echo '<div class="parr_1">'.$elemento_l.'<p></p>'.$content.'<br>'.$formulario.'</div>';
             ?>
             
